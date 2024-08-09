@@ -2,9 +2,10 @@
 The project contains a customizable WheelPicker which is more flexible than android native NumberPicker widget. 
 ## Gradle
 ```groovy
-    compile 'com.super_rabbit.wheel_picker:NumberPicker:1.0.1'
+    compile 'com.github.AngelinaFedorova:NumberPicker:1.1'
 ```
 ## Features
+- Removed jcenter
 - Customizable font include text size, typeface, color and alignment.
 - Customizable picker item count, can be odd or even number.
 - Support both positive and negative values

@@ -24,7 +24,6 @@
         android:id="@+id/show_style_demo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
         android:text="Styles Demo"
         app:layout_constraintBottom_toTopOf="@id/show_unlimited_number_picker"
         app:layout_constraintLeft_toLeftOf="parent" />
@@ -33,7 +32,6 @@
         android:id="@+id/show_unlimited_number_picker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
         android:text="Unlimited Number Picker"
         app:layout_constraintBottom_toTopOf="@id/show_day_picker"
         app:layout_constraintLeft_toLeftOf="parent" />
@@ -42,7 +40,6 @@
         android:id="@+id/show_day_picker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
         android:text="Day Picker"
         app:layout_constraintBottom_toTopOf="@id/show_birthday_day_picker"
         app:layout_constraintLeft_toLeftOf="parent" />
@@ -51,7 +48,6 @@
         android:id="@+id/show_birthday_day_picker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
         android:text="Birthday Picker"
         app:layout_constraintBottom_toTopOf="@id/show_week_day_picker"
         app:layout_constraintLeft_toLeftOf="parent" />
@@ -60,7 +56,6 @@
         android:id="@+id/show_week_day_picker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
         android:text="Week Day Picker"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent" />

@@ -10,7 +10,6 @@ import com.super_rabbit.wheel_picker.DayAdapter
 import com.super_rabbit.wheel_picker.MonthAdapter
 import com.super_rabbit.wheel_picker.OnValueChangeListener
 import com.super_rabbit.wheel_picker.WheelPicker
-import kotlinx.android.synthetic.main.fragment_birthday_picker.*
 import java.util.*
 
 class BirthdayPickerFragment : androidx.fragment.app.Fragment() {
@@ -27,9 +26,15 @@ class BirthdayPickerFragment : androidx.fragment.app.Fragment() {
 
     private val monthAdapter = MonthAdapter()
     private var dayAdapter = DayAdapter()
+    private lateinit var day: WheelPicker
+    private lateinit var month: WheelPicker
+    private lateinit var year: WheelPicker
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        day = view.findViewById(R.id.day)
+        month = view.findViewById(R.id.month)
+        year = view.findViewById(R.id.year)
 
         day.setAdapter(dayAdapter)
         month.setAdapter(monthAdapter)

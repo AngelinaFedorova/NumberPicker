@@ -2,10 +2,11 @@ package com.super_rabbit.demo
 
 import android.graphics.Typeface
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import com.super_rabbit.demo.wheel_picker_adapters.WPDayPickerAdapter
-import kotlinx.android.synthetic.main.activity_normal_number_picker.*
+import com.super_rabbit.wheel_picker.WheelPicker
 
 class DemoActivity : AppCompatActivity() {
     private var mIsRoundedWrapPreferred = false
@@ -14,9 +15,23 @@ class DemoActivity : AppCompatActivity() {
     private var mIsDayPicker = false
     private var currentTypeFace = Typeface.SERIF
 
+    private lateinit var numberPicker: WheelPicker
+    private lateinit var set_wrap: Button
+    private lateinit var set_wheel_item_count: Button
+    private lateinit var set_selected_color: Button
+    private lateinit var set_style: Button
+    private lateinit var set_font: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_normal_number_picker)
+
+        numberPicker = findViewById(R.id.numberPicker)
+        set_wrap = findViewById(R.id.set_wrap)
+        set_wheel_item_count = findViewById(R.id.set_wheel_item_count)
+        set_selected_color = findViewById(R.id.set_selected_color)
+        set_style = findViewById(R.id.set_style)
+        set_font = findViewById(R.id.set_font)
 
         //Set rounded wrap enable
         numberPicker.setWrapSelectorWheel(true)

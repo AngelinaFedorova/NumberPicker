@@ -2,7 +2,7 @@ package com.super_rabbit.demo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -19,30 +19,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         replaceFragment(BirthdayPickerFragment.newInstance());
+        setClickListeners(this);
     }
 
-    public void onClick(View v) {
-        Intent intent;
-        switch (v.getId()) {
-            case R.id.show_style_demo:
-                intent = new Intent(MainActivity.this, DemoActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.show_unlimited_number_picker:
-                replaceFragment(UnlimitedNumberPickerDemo.newInstance());
-                break;
-            case R.id.show_week_day_picker:
-                replaceFragment(WeekDayPickerFragment.newInstance());
-                break;
-            case R.id.show_day_picker:
-                replaceFragment(DateAndTimePickerFragment.newInstance());
-                break;
-            case R.id.show_birthday_day_picker:
-                replaceFragment(BirthdayPickerFragment.newInstance());
-                break;
-            default:
-                break;
-        }
+    public void setClickListeners(MainActivity activity) {
+        activity.findViewById(R.id.show_style_demo).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, DemoActivity.class);
+            startActivity(intent);
+        });
+        activity.findViewById(R.id.show_unlimited_number_picker).setOnClickListener(v -> replaceFragment(UnlimitedNumberPickerDemo.newInstance()));
+        activity.findViewById(R.id.show_week_day_picker).setOnClickListener(v -> replaceFragment(WeekDayPickerFragment.newInstance()));
+        activity.findViewById(R.id.show_day_picker).setOnClickListener(v -> replaceFragment(DateAndTimePickerFragment.newInstance()));
+        activity.findViewById(R.id.show_birthday_day_picker).setOnClickListener(v -> replaceFragment(BirthdayPickerFragment.newInstance()));
     }
 
     private void replaceFragment(Fragment fragment) {
